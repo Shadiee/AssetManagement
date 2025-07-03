@@ -77,18 +77,18 @@ flowchart LR
         INPUT[📁 Input Audio<br/>MP3, WAV, OPUS<br/>M4A, OGG, WebM]
         
         subgraph "Stage 1: Format Conversion"
-            CONVERT[🔄 Convert to WAV<br/>• 16kHz Sample Rate<br/>• Mono Channel<br/>• pydub + FFmpeg]
+            CONVERT[🔄 Convert to WAV<br/>16kHz Sample Rate<br/>Mono Channel<br/>pydub + FFmpeg]
         end
         
         subgraph "Stage 2: Audio Enhancement"
-            ENHANCE[🎯 Audio Enhancement<br/>• Volume Normalization<br/>• High-pass Filter (80Hz)<br/>• Low-pass Filter (8kHz)<br/>• librosa + scipy]
+            ENHANCE[🎯 Audio Enhancement<br/>Volume Normalization<br/>High-pass Filter 80Hz<br/>Low-pass Filter 8kHz<br/>librosa + scipy]
         end
         
         subgraph "Stage 3: Speech Analysis"
-            ANALYZE[📊 Speech Analysis<br/>• RMS Energy Detection<br/>• Zero Crossing Rate<br/>• Spectral Centroid<br/>• Speech Segmentation]
+            ANALYZE[📊 Speech Analysis<br/>RMS Energy Detection<br/>Zero Crossing Rate<br/>Spectral Centroid<br/>Speech Segmentation]
         end
         
-        OUTPUT[✨ Enhanced Audio<br/>• Optimized for AI<br/>• 95%+ Accuracy<br/>• Noise Reduced]
+        OUTPUT[✨ Enhanced Audio<br/>Optimized for AI<br/>95%+ Accuracy<br/>Noise Reduced]
     end
     
     INPUT --> CONVERT
@@ -97,7 +97,7 @@ flowchart LR
     ANALYZE --> OUTPUT
     
     %% Performance Metrics
-    METRICS[⚡ Performance<br/>• 2-3x Real-time<br/>• 50+ Concurrent<br/>• Auto Cleanup]
+    METRICS[⚡ Performance<br/>2-3x Real-time<br/>50+ Concurrent<br/>Auto Cleanup]
     
     OUTPUT -.-> METRICS
     
@@ -130,10 +130,10 @@ flowchart TD
             SANITIZER[🔒 Transcript Sanitizer<br/>Zimbabwe-Specific Patterns]
             
             subgraph "Sanitization Patterns"
-                PHONE[📞 Phone: 0788405008 → [PHONE]]
-                MONEY[💰 Money: $500 USD → [AMOUNT]]
-                NAME[👤 Name: John Doe → [CUSTOMER]]
-                ACCOUNT[🏦 Account: 123456789 → [ACCOUNT]]
+                PHONE[📞 Phone Numbers<br/>0788405008 to PHONE_NUM]
+                MONEY[💰 Currency Amounts<br/>500 USD to AMOUNT]
+                NAME[👤 Customer Names<br/>John Doe to CUSTOMER]
+                ACCOUNT[🏦 Account Numbers<br/>123456789 to ACCOUNT_NUM]
             end
         end
         
