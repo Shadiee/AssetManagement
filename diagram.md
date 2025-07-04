@@ -18,9 +18,9 @@
 
 ```mermaid
 graph TB
-    subgraph "AI Call Summarization Platform"
+    subgraph "CallGist Paltform"
         subgraph "Frontend Layer"
-            FE[🖥️ Streamlit Web App<br/>Port: 8501<br/>• Upload Interface<br/>• Dashboard<br/>• Real-time Updates]
+            FE[🖥️ Angular Web App<br/>Port: 4200<br/>• Upload Interface<br/>• Dashboard<br/>• Real-time Updates]
         end
         
         subgraph "Backend Services"
@@ -37,9 +37,9 @@ graph TB
             STORAGE[📁 File Storage<br/>/tmp/audio<br/>• Temp files<br/>• Processed audio]
         end
         
-        subgraph "External Services"
-            WHISPER[🎯 OpenAI Whisper<br/>Speech-to-Text]
-            GPT4[🧠 GPT-4<br/>Analysis & Insights]
+        subgraph "AI Engine"
+            WHISPER[🎯 Whisper<br/>Speech-to-Text]
+            LLM[🧠 GPT-4o<br/>Analysis & Insights]
         end
     end
     
